@@ -1,0 +1,150 @@
+*{
+  margin: 0;
+}
+
+.nav{
+  text-align: center;
+  padding: 0px;
+}
+
+.nav > li{
+  display: inline;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.card{
+  background-color: rgba(129, 190, 247, 0.75);
+  width: 42.5%;
+  min-height: 170px;
+  margin-left: 5%;
+  margin-top: 4%;
+  float: left;
+}
+
+.title{
+	font-family: 'Mukta', sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 800;
+    margin-top: 5px;
+    margin-left: 2.5%;
+
+}
+
+.sort{
+	margin-left: 2.5%;
+	width: 95%;
+	border-bottom: 1px solid white;
+	font-size: small;
+	font-family: 'Mukta', sans-serif;
+}
+
+.intro{
+	margin-top:50px;
+	text-align: center;
+	width: 60%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.contact{
+	margin-top:50px;
+	text-align: center;
+	background-color: #81BEF7;
+	width: 40%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.info{
+  margin-left: 2.5%; 
+  width: 95%;
+}
+
+.but{
+  position:absolute;
+  margin-left: 32.5%;
+  margin-top: 10px;
+  background-color: #D3D3D3;
+  border: 1px solid white;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.when{
+  margin-left: 2.5%;
+}
+
+.contacttitles{
+	margin-top:10px;
+}
+
+#reas{
+  position:absolute;
+  left: 30px;
+}
+
+#header{
+  background-color: white; /*#ADD8E6*/
+  height: 5%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid #01A9DB;
+}
+
+#titletext{
+  margin-top: 2%;
+  text-align: center;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+}
+
+#selected{
+  text-decoration: underline;
+}
+
+#searchbar{
+	margin-left:70%;
+	width: 25%;
+}
+
+#content{
+	min-width:200px;
+	max-width: 70%;
+	max-height: 400px;
+}
+
+#BigLogo{
+	max-width:100%;
+	max-height:100%;
+	margin-left:15%;
+}
+
+#contact-submit{
+	margin-top:15px;
+	margin-bottom:10px;
+	cursor:pointer;
+	width:40%;
+	border:none;
+	background:gray;
+	color:#FFF;
+	padding:10px;
+	font-size:15px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+}
+
+a:hover{
+  text-decoration: underline;
+  color: black;
+}
