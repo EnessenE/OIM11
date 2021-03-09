@@ -1,37 +1,121 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Projects</title>
-	<link type="text/css" rel="stylesheet" href="css/style.css"/>
-	<link href="https://fonts.googleapis.com/css?family=Mukta" rel="stylesheet">
-</head>
-<body>
-  <div id="header">
-    <ul class="nav">
-      <li id="reas"><a href="index.html"><img src="logo.png" alt="Logo" height="30"></a></li>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="scripts.html">Scripts</a></li>
-	  <li><a href="tools.html">Tools</a></li>
-	  <li><a href="projects.html" id="selected">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li> 
-    </ul>
-  </div>
-  <div class="Main">
-    <p id="titletext">A list of projects</p>
-	<form>
-<!-- 	  <input type="text" id="searchbar" name="search" placeholder="Search.."> -->
-	</form>
-    <div id="List">
-      <div class="card" id="1">
-        <button type="button" class="but" ><a href="https://imgur.com">Imgur album</a></button>
-        <p class="title">Wall mounted PC building</p>
-		<p class="sort">Office</p>
-        <p class="when">05-10-2017</p>
-        <p class="info">A self improvised wall mounted PC Build. Within the album instruction on how to build/replicate this project.</p>
-      </div>  
-      </div>  
-    </div>
-  </div>
-<script type="text/javascript" src="js/script.js"></script>
-</body>
+	<head>
+		<title>Projects</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Mukta" rel="stylesheet">
+		<meta charset="UTF-8">
+	</head>
+	<body>
+	  <div id="header">
+		<ul class="nav">
+		  <li id="reas"><a href="index.html"><img src="images/minilogo.png" alt="Logo" height="40"></a></li>
+		  <li><a href="index.html">Home</a></li>
+		  <li><a href="scripts.html">Scripts</a></li>
+		  <li><a href="tools.html">Tools</a></li>
+		  <li><a href="projects.html" id="selected">Projects</a></li>
+		  <li><a href="contact.html">Contact</a></li> 
+		</ul>
+	  </div>
+	  <div class="Main">
+		<div class="filter">
+		<p class="ball"><b>Choose a filter</b></p>
+			<input class="ball" type="radio" onclick="filterSelection('all')" name="category" checked> Show all<br>
+			<input class="ball" type="radio" onclick="filterSelection('real')" name="category"> Real life projects<br>
+			<input class="ball" type="radio" onclick="filterSelection('fun')" name="category"> Fun<br>
+			<input class="ball" type="radio" onclick="filterSelection('office')" name="category"> Office<br>
+			<input class="ball" type="radio" onclick="filterSelection('edu')" name="category"> Education<br>
+		</div>
+
+		<div id="List">
+				<div class="projectcard real" id="1">
+					<form style="display: inline" action="https://imgur.com" method="get">
+					  <button class="but">Imgur</button>
+					</form>        
+					<p class="title">Wall mounted PC building</p>
+					<p class="sort">Real life projects</p>
+					<p class="when">05-10-2017</p>
+					<p class="info">A self improvised wall mounted PC Build. Within the album instruction on how to build/replicate this project.</p>
+				  </div>  
+				</div>  
+				
+				<div class="projectcard fun" id="1">
+					<form style="display: inline" action="https://github.com" method="get">
+					  <button class="but">Forum</button>
+					</form>        
+					<p class="title">Smite guide</p>
+					<p class="sort">Fun</p>
+					<p class="when">04-10-2017</p>
+					<p class="info">Find here tip and tricks for the MOBA Smite, everything from god selection to playstyle. </p>
+				  </div>  
+				</div>  
+
+				<div class="projectcard office" id="1">
+					<form style="display: inline" action="https://amazon.com" method="get">
+					  <button class="but">Amazon</button>
+					</form>        
+					<p class="title">Amazon partner</p>
+					<p class="sort">Office</p>
+					<p class="when">05-10-2017</p>
+					<p class="info">We are now an Amazon partner! Go to Amazon through that button and get 5% of all purchases for office equipment.</p>
+				  </div>  
+				</div>  
+				
+				<div class="projectcard office fun" id="1">
+					<form style="display: inline" action="https://amazon.com" method="get">
+					  <button class="but">Amazon</button>
+					</form>        
+					<p class="title">Colorfull pencils</p>
+					<p class="sort">Office & Fun</p>
+					<p class="when">23-10-2017</p>
+					<p class="info">Buy colorfull pencils... its fun. For the office and for the children at home. Yeah I am out of content.</p>
+				  </div>  
+				</div> 
+				
+				<div class="projectcard office edu" id="1">
+					<form style="display: inline" action="https://amazon.com" method="get">
+					  <button class="but">Buy it</button>
+					</form>        
+					<p class="title">Book about Server 2012 R2</p>
+					<p class="sort">Education & Office</p>
+					<p class="when">25-10-2017</p>
+					<p class="info">This book gets you up to speed on all of the new features, functions of Windows Server, Installing or upgrading to and managing Windows Server 2012 R2.</p>
+				  </div>  
+				</div> 
+		</div>
+	  <script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("projectcard");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+</script>
+
+	</body>
 </html>

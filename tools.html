@@ -1,48 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Tools</title>
-	<link type="text/css" rel="stylesheet" href="css/style.css"/>
-	<link href="https://fonts.googleapis.com/css?family=Mukta" rel="stylesheet">
-</head>
-<body>
-  <div id="header">
-    <ul class="nav">
-      <li id="reas"><a href="index.html"><img src="logo.png" alt="Logo" height="30"></a></li>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="scripts.html">Scripts</a></li>
-	  <li><a href="tools.html" id="selected">Tools</a></li>
-	  <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li> 
-    </ul>
-  </div>
-  <div class="Main">
-    <p id="titletext">A list of tools</p>
-	<form>
-<!-- 	  <input type="text" id="searchbar" name="search" placeholder="Search.."> -->
-	</form>
-    <div id="List">
-      <div class="card" id="1">
-        <button type="button" class="but" >Download</button>
-        <p class="title">Project #1</p>
-		<p class="sort">Windows</p>
-        <p class="when">18-09-2017</p>
-        <p class="info">Lorem ipsum generateum some textum</p>
-      </div>  
-      <div class="card" id="2">
-        <button type="button" class="but" >Download</button>
-        <p class="title">Project #2</p>
-        <p class="when">18-09-2017</p>
-        <p class="info">Lorem ipsum generateum more textum</p>
-      </div>  
-      <div class="card" id="3">
-        <button type="button" class="but" >Download</button>
-        <p class="title">Project #3</p>
-        <p class="when">18-09-2017</p>
-        <p class="info">Lorem ipsum generateum more more more textum</p>
-      </div>  
-    </div>
-  </div>
-<script type="text/javascript" src="js/script.js"></script>
-</body>
+	<head>
+		<title>Tools</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Mukta" rel="stylesheet">
+		<meta charset="UTF-8">
+	</head>
+	<body>
+	  <div id="header">
+		<ul class="nav">
+		  <li id="reas"><a href="index.html"><img src="images/minilogo.png" alt="Logo" height="40"></a></li>
+		  <li><a href="index.html">Home</a></li>
+		  <li><a href="scripts.html">Scripts</a></li>
+		  <li><a href="tools.html" id="selected">Tools</a></li>
+		  <li><a href="projects.html">Projects</a></li>
+		  <li><a href="contact.html">Contact</a></li> 
+		</ul>
+	  </div>
+	  <div class="Main">
+		<div id="List">
+		  <div class="BigCard" id="1">
+			<form style="display: inline" action="./tools/RekenMachine.exe" method="get">
+			  <button class="but">Download</button>
+			</form>
+			<img src="images/windows.png" alt="Logo" class="SortImage"><p class="title">Calculator</p>
+			<p class="sort">Windows 7 and higher</p>
+			<p class="when"></p>
+			<p class="bigcardinfo">A calculator. You can solve high tech massive math problem with this tool. All your math troubles will be gone!</br></br>
+			Modern electronic calculators vary: from cheap, give-away, credit-card-sized models to sturdy desktop models with built-in printers. They became popular in the mid-1970s (as integrated circuits made their size and cost small). By the end of that decade, calculator prices had reduced to a point where a basic calculator was affordable to most and they became common in schools.</br></br>
+
+			Computer operating systems as far back as early Unix have included interactive calculator programs such as dc and hoc, and calculator functions are included in almost all personal digital assistant (PDA) type devices (save a few dedicated address book and dictionary devices).</br></br>
+
+			In addition to general purpose calculators, there are those designed for specific markets. For example, there are scientific calculators which include trigonometric and statistical calculations. Some calculators even have the ability to do computer algebra. Graphing calculators can be used to graph functions defined on the real line, or higher-dimensional Euclidean space. As of 2016, basic calculators cost little, but the scientific and graphing models tend to cost more.</p>
+			<img src="images/reken.png" class="CardImage" alt="Logo" height="">
+			<img src="images/reken2.png" class="CardImage" alt="Logo" height="">
+			<img src="images/reken3.png" class="CardImage" alt="Logo" height="">
+		  </div>  
+		</div>
+	  </div>
+	<script type="text/javascript" src="js/script.js"></script>
+	</body>
 </html>
